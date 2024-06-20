@@ -1,0 +1,110 @@
+body {
+    background-color: #4044C9;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+form {
+    width: 78%;
+    left: 50%;
+    position: absolute;
+    top: 80px;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+}
+
+form input {
+    width: 580px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #252794;
+    margin-left: 120px;
+    border: #0f248a solid 1px;
+}
+
+
+input::placeholder {
+    color: white;
+}
+
+form button {
+    width: 100px;
+    padding: 10px;
+    background-color: #ffffff;
+    color:#252794;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#tasks-container {
+    background-color: #ffffff;
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px; 
+    box-sizing: border-box;
+    position: absolute;
+    top: 190px; 
+}
+
+a i {
+    color :#252794;
+}
+
+#ligne {
+    background-color:#a7a7a7 ;
+    height: 1px;
+    width: 520px;
+    position: relative; top : 40px; right: 55px;
+}
+
+#modifier i {
+    color:#0f248a;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative; left : 340px; top : -20px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#supprimer i {
+    color:#0f248a;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative; left : 340px; top : -20px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#task-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-left: -56px;
+    position: relative;  top : 15px;  left: 20px;
+}
+
+#check {
+    height: 20px;
+    width: 40px;
+    position: relative; top :18px;right: 45px;
+}
+
+#taches {
+   margin-left: 105px;
+}
