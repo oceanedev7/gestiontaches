@@ -10,7 +10,7 @@ class TasksController extends Controller
     	$afficherTaches = Task::all();
 //  var_dump ($afficherTaches);
     return view(
-        'taches', ['allTasks'=>$afficherTaches]
+        'tasks.tache', ['allTasks'=>$afficherTaches]
     );}
 
     public function ajouter (Request $request) {
@@ -26,7 +26,7 @@ class TasksController extends Controller
 
     public function supprimer ($id) {
     	
-        $supp  = Task::find($id);
+        $supp  = Task::findOrFail($id);
         $supp->delete();
         
         return redirect("/");}
@@ -34,7 +34,7 @@ class TasksController extends Controller
 
         public function edit ($id) {
 
-            $task=Task::find($id);  
+            $task=Task::findOrFail($id);  
             return view("tasks.edit", compact('task'));
     }
     
