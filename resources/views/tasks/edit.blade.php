@@ -9,7 +9,8 @@
 <body>
 
 <h1> Modifier </h1>
-    <form action="{{ route('modifierTaches', $task->id) }}" method="get">
+    <form action="{{ route('modifierTaches', $task->id) }}" method="post">
+        @csrf
         <input value ="{{ $task->title }}"  type="text" name="title" placeholder="Modifier la tâche" > 
         <button type="submit"> Modifier </button>
 
