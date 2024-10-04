@@ -22,7 +22,9 @@
 @foreach ($allTasks as $task)
     <ul> 
    
-        <input id="check" action="{{ route('modifierStatus', $task->id) }}" method="post" type="checkbox"> 
+        {{-- <input id="check" action="{{ route('modifierStatus', $task->id) }}" method="post" type="checkbox">  --}}
+        <input id="check" action="#" method="post" type="checkbox"> 
+
 
     <span id="task-title">{{ $task->title }}</span>
 

@@ -20,5 +20,5 @@ Route::get('/delete/{id}', [TasksController::class, 'supprimer'])->name('supprim
 Route::get('/edit/{id}', [TasksController::class,'edit'])->name('editerTaches');
 Route::get('/update/{id}', [TasksController::class,'modifier'])->name('modifierTaches');
 
-Route::get('/statut/{id}', [TasksController::class, 'toggle'])->name('modifierStatus');
+// Route::get('/statut/{id}', [TasksController::class, 'toggle'])->name('modifierStatus');
 
