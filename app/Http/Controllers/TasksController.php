@@ -8,17 +8,17 @@ class TasksController extends Controller
 {
     public function afficher () {
     	$afficherTaches = Task::all();
-//  var_dump ($afficherTaches);
     return view(
         'tasks.tache', ['allTasks'=>$afficherTaches]
     );}
 
     public function ajouter (Request $request) {
-    	//  var_dump ($request);
+
         $request->validate(
             [
                 'title'=>'required|string',
             ]);
+
          Task::create($request->all());
  
     return redirect("/");
@@ -36,7 +36,7 @@ class TasksController extends Controller
 
             $task=Task::findOrFail($id);  
             return view("tasks.edit", compact('task'));
-    }
+        }
     
 
     public function modifier (Request $request, $id) {
@@ -49,7 +49,6 @@ class TasksController extends Controller
                 $task->update($validatedData);
         
                 return redirect("/");
-
             }
 
     // public function toggle($id)
